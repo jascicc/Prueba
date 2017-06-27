@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Estadias.Models.Alumno>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreAlumno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seguroSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carreraID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreAlumno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seguroSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carreraID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.alumnoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.alumnoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.alumnoID })
+        </td>
+    </tr>
+}
+
+</table>

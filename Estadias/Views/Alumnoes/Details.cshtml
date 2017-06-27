@@ -1,0 +1,66 @@
+﻿@model Estadias.Models.Alumno
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Alumno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreAlumno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreAlumno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoPaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoPaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoMaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoMaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seguroSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seguroSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carreraID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carreraID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.alumnoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

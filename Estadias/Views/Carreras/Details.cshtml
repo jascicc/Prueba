@@ -1,0 +1,34 @@
+﻿@model Estadias.Models.Carrera
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Carrera</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.alumno.nombreAlumno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alumno.nombreAlumno)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCarrera)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.carreraID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
